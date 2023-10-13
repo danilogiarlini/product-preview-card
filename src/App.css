@@ -4,12 +4,13 @@ body {
 
 .card {
   display: flex;
+  margin: 6rem auto;
+  flex-direction: row;
   background-color: white;
   overflow: hidden;
   width: 640px;
   height: 500px;
   border-radius: 10px;
-  transform: scale(0.6);
 }
 
 .card img {
@@ -22,7 +23,7 @@ body {
 
 .card-content h1 {
   font-family: "Fraunces", "serif";
-  margin-right: 16px;
+  margin-right: 1rem;
 }
 
 .card-content h2 {
@@ -73,4 +74,22 @@ button:hover {
 .price p {
   text-decoration: line-through;
   justify-content: left;
+}
+
+@media (max-width: 900px) {
+  .card {
+    display: flex;
+    margin: 6rem auto;
+    flex-direction: column;
+    width: 375px;
+    height: 1050px;
+    background-color: white;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .card img {
+    max-height: 100%;
+    object-fit: cover;
+  }
 }
